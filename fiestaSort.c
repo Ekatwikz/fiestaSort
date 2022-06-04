@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
 	int min = atoi(argv[1]);
 	int max = atoi(argv[2]);
 	USAGE(min <= max);
-	size_t sz = atoi(argv[3]);
+	int sz = atoi(argv[3]);
 	USAGE(sz > 1);
 
 	// make and print array of random numbers
