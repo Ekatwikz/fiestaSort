@@ -23,7 +23,7 @@ x:
 void fiestaSortCLEANISH(int* arr, size_t sz) {
 	size_t i = 1, j = 1;
 
-thiccTernary:
+bigTernary:
 	j ? // if j isnt 0,
 		arr[j--] ^= // decrement j after (just one of many sequence point
 			// abuses here xD) we:
@@ -43,7 +43,7 @@ thiccTernary:
 				// , we're done
 	;
 
-	goto thiccTernary; // otherwise we
+	goto bigTernary; // otherwise we
 	    // keep going
 }
 
@@ -66,7 +66,7 @@ int main(int argc, char** argv) {
 
 	// make and print array of random numbers
 	srand(time(NULL));
-	int* arr = malloc(sz * sizeof(int));
+	int* arr = malloc_(sz * sizeof(int));
 	randArray(arr, sz, min, max);
 	printArray(arr, sz);
 
