@@ -14,14 +14,14 @@
 #pragma GCC diagnostic ignored "-Wpedantic"
 
 void fiestaSort(int* arr, size_t sz) {
-	size_t i=1,j=1;
+	size_t i=1,j=0;
 x:
 	j?arr[j--]^=arr[j-1]>arr[j]?arr[j-1]^=arr[j]^=arr[j-1]:0:(j=++i)<sz?:({return;});
 	goto x;
 }
 
 void fiestaSortCLEANISH(int* arr, size_t sz) {
-	size_t i = 1, j = 1;
+	size_t i = 1, j = 0;
 
 bigTernary:
 	j ? // if j isnt 0,
@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
 	int max = atoi(argv[2]);
 	USAGE(min <= max);
 	int sz = atoi(argv[3]);
-	USAGE(sz > 1);
+	USAGE(sz > 0);
 
 	// make and print array of random numbers
 	srand(time(NULL));
