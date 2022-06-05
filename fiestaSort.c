@@ -57,7 +57,7 @@ bool checkArray(int* arr, size_t sz);
 
 int main(int argc, char** argv) {
 	// get arguments and setup
-	USAGE(argc > 3);
+	USAGE(argc == 4);
 	int min = atoi(argv[1]);
 	int max = atoi(argv[2]);
 	USAGE(min <= max);
